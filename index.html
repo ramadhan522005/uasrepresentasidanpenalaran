@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistem Pakar Diagnosa Cedera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      position: relative;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #hasil-diagnosa-section {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e7f3e7;
+      border-left: 5px solid #4CAF50;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    .side-image {
+      position: absolute;
+      top: 0;
+      width: 80px;
+    }
+    .side-image.left {
+      left: -100px;
+    }
+    .side-image.right {
+      right: -100px;
+    }
+    @media (max-width: 600px) {
+      main {
+        margin: 10px;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .side-image {
+        display: none;
+      }
+      button {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+    /* Tambahkan gaya untuk form login */
+    #login-form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    #login-form input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sistem Pakar Diagnosa Cedera</h1>
+  </header>
+  <main>
+    <img src="nurse1.jpeg" class="side-image left" alt="Anime Nurse Left">
+    <img src="nurse2.jpeg" class="side-image right" alt="Anime Nurse Right">
+    
+    <!-- Form Login -->
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="button" id="btn-login">Login</button>
+    </form>
+
+    <!-- Konten yang ada -->
+    <div id="main-content" style="display: none;">
+      <form>
+        <ul id="gejala-list"></ul>
+        <button type="button" id="btn-diagnosa">Diagnosa</button>
+      </form>
+      <div id="hasil-diagnosa-section" style="display: none;">
+        <p id="hasil-diagnosa-text"></p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Dimas Ramadhan, Ryandani Budianto, dan Muhammad Kautsar Putra Binoba</p>
+  </footer>
+
+  <!-- Tambahkan referensi ke file login.js dan script.js -->
+  <script src="login.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
